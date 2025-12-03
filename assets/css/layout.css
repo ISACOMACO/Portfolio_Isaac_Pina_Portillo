@@ -1,19 +1,17 @@
 /*
-	 * ANIMATION TOKENS
-	 *
-	 * Centralizing animation values ensures consistency and makes
-	 * global timing adjustments trivial.
-	 *
-	 * The custom easing curve creates a "gentle landing" effect:
-	 * - Fast start (0.22, 1)
-	 * - Smooth deceleration (0.36, 1)
-	 */
+ * ANIMATION TOKENS
+ *
+ * Centralizing animation values ensures consistency and makes
+ * global timing adjustments trivial.
+ *
+ * The custom easing curve creates a "gentle landing" effect:
+ * - Fast start (0.22, 1)
+ * - Smooth deceleration (0.36, 1)
+ */
+:root {
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* "Power2.out" equivalent */
   --duration-normal: 0.6s; /* Default animation duration */
 }
-
-
-
 /* --------------------------------------------------------------------------
    3. Layout Components
    -------------------------------------------------------------------------- */
@@ -32,8 +30,6 @@
   margin-bottom: var(--space-xl);
   text-align: center;
 }
-
-
 
 /* --------------------------------------------------------------------------
    5. Hero Section
