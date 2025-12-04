@@ -5,39 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <script src=./assets/js/main.js defer></script>>
+    <script src=./assets/js/main.js defer></script>
   </head>
   <body>
     <!-- Skip link for accessibility -->
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="#" class="nav-logo">Portfolio</a>
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+<nav class="nav" style="height: 120px; display: flex; align-items: center;">
+  <div class="nav-container" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+    <a href="#" class="nav-logo" style="font-size: 1.2rem; font-weight: normal; text-decoration: none; line-height: normal;">ISAAC PIÑA PORTILLO</a>
+    <ul class="nav-links" style="display: flex; gap: 2rem; align-items: center;">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
     <main id="main">
       <!-- Hero Section -->
       <section id="hero" class="hero">
         <div class="hero-bg parallax-bg"></div>
         <div class="hero-content">
-          <h1 class="hero-title animate-on-scroll">Jane Developer</h1>
-          <p class="hero-subtitle animate-on-scroll">
-            Front-End Engineer & UI Designer
-          </p>
-          <a href="#projects" class="btn animate-on-scroll">View My Work</a>
-        </div>
-        <div class="scroll-indicator">
-          <span>Scroll</span>
-          <div class="scroll-arrow"></div>
+          <h1 class="hero-title animate-on-scroll" style="font-size: 15rem; font-weight: 900; line-height: 1;">PORTFOLIO</h1>
+          <p class="hero-subtitle animate-on-scroll"></p>
+          <a href="#projects" class="btn animate-on-scroll">My Work</a>
         </div>
       </section>
 
@@ -100,55 +94,32 @@
           <div class="projects-grid" data-reveal-stagger>
             <article class="project-card">
               <div class="project-image">
-                <img
-                  src="https://picsum.photos/400/300?random=1"
-                  alt="E-commerce Platform"
-                  loading="lazy"
-                />
+                <img src="https://picsum.photos/400/300?random=1" alt="E-commerce Platform" loading="lazy" />
               </div>
               <div class="project-content">
                 <h3>E-commerce Platform</h3>
-                <p>
-                  A fully responsive online store with cart functionality and
-                  payment integration.
-                </p>
-                <div class="project-tags">
-                  <span>HTML</span><span>CSS</span><span>JS</span>
-                </div>
+                <p>A fully responsive online store with cart functionality and payment integration.</p>
+                <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
               </div>
             </article>
             <article class="project-card">
               <div class="project-image">
-                <img
-                  src="https://picsum.photos/400/300?random=2"
-                  alt="Dashboard UI"
-                  loading="lazy"
-                />
+                <img src="https://picsum.photos/400/300?random=2" alt="Dashboard UI" loading="lazy" />
               </div>
               <div class="project-content">
                 <h3>Analytics Dashboard</h3>
-                <p>
-                  Real-time data visualization dashboard with dark mode support.
-                </p>
-                <div class="project-tags">
-                  <span>CSS Grid</span><span>Charts</span><span>API</span>
-                </div>
+                <p>Real-time data visualization dashboard with dark mode support.</p>
+                <div class="project-tags"><span>CSS Grid</span><span>Charts</span><span>API</span></div>
               </div>
             </article>
             <article class="project-card">
               <div class="project-image">
-                <img
-                  src="https://picsum.photos/400/300?random=3"
-                  alt="Mobile App Landing"
-                  loading="lazy"
-                />
+                <img src="https://picsum.photos/400/300?random=3" alt="Mobile App Landing" loading="lazy" />
               </div>
               <div class="project-content">
                 <h3>App Landing Page</h3>
                 <p>Conversion-optimized landing page with scroll animations.</p>
-                <div class="project-tags">
-                  <span>Animation</span><span>A/B Test</span><span>SEO</span>
-                </div>
+                <div class="project-tags"><span>Animation</span><span>A/B Test</span><span>SEO</span></div>
               </div>
             </article>
           </div>
@@ -160,12 +131,8 @@
         <div class="container">
           <h2 class="section-title animate-on-scroll">Get In Touch</h2>
           <div class="contact-content animate-on-scroll">
-            <p>
-              Interested in working together? Let's talk about your project.
-            </p>
-            <a href="mailto:hello@example.com" class="btn btn-primary"
-              >Say Hello</a
-            >
+            <p>Interested in working together? Let's talk about your project.</p>
+            <a href="mailto:hello@example.com" class="btn btn-primary">Say Hello</a>
             <div class="social-links">
               <a href="#" aria-label="GitHub">GitHub</a>
               <a href="#" aria-label="LinkedIn">LinkedIn</a>

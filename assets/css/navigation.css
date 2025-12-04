@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------
    4. Navigation
    -------------------------------------------------------------------------- */
-.nav {
+.site-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
   padding: var(--space-md) 0;
 }
 
-.nav-container {
+.site-header .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,23 +20,27 @@
   margin-inline: auto;
 }
 
-.nav-logo {
+.site-header h1 {
   font-size: var(--text-xl);
   font-weight: var(--font-weight-bold);
+  margin: 0;
 }
 
-.nav-links {
+.main-nav ul {
   display: flex;
   gap: var(--space-lg);
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
+.main-nav a {
   color: var(--color-text-muted);
+  text-decoration: none;
   transition: color 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
+.main-nav a:hover,
+.main-nav a:focus {
   color: var(--color-accent);
 }
