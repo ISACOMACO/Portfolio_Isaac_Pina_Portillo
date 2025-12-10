@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: var(--font-family-system);
-  font-size: var(--text-base); 
+  font-size: var(--text-base);
   line-height: var(--line-height-base);
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -21,6 +21,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
 
 a {
   color: inherit;
