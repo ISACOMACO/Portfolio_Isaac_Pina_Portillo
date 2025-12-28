@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio – Isaac Piña Portillo</title>
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <script src="./assets/js/main.js" defer></script>
-
-    <!-- Favicon -->
     <link
       rel="icon"
       href="https://ik.imagekit.io/ig1zyhrhpc/ISAAC%20FAVICON.jpg"
@@ -16,17 +13,13 @@
   </head>
 
   <body>
-    <!-- MAIN CONTENT -->
     <main id="main">
-      <!-- 1️⃣ HERO / LANDING -->
+      <!-- HERO / LANDING -->
       <section id="hero" class="hero">
         <div class="hero-top">
-          <!-- Quién soy a la izquierda -->
           <div class="hero-about">
             <a href="#quien-soy">Quién soy</a>
           </div>
-
-          <!-- Menú principal centrado -->
           <nav class="hero-menu">
             <ul>
               <li><a href="#graphic-design">Diseño gráfico</a></li>
@@ -37,8 +30,6 @@
             </ul>
           </nav>
         </div>
-
-        <!-- TÍTULO PORTFOLIO (debajo del bloque negro) -->
         <div class="hero-title-container">
           <h1 class="hero-title">
             <span class="line">PORT</span>&nbsp;&nbsp;
@@ -49,10 +40,9 @@
           </h1>
         </div>
       </section>
-
-      <!-- SECCIÓN CON IMAGEN CENTRADA -->
+      <!-- SECCIÓN CON IMAGEN CENTRAL -->
       <section id="image-section" class="image-section">
-        <div class="container">
+        <div class="logo-container">
           <img
             src="https://ik.imagekit.io/ig1zyhrhpc/LOGO%20ISAAC-02.png"
             alt="Isaac Logo"
@@ -61,7 +51,7 @@
         </div>
       </section>
 
-      <!-- 2️⃣ QUIÉN SOY -->
+      <!-- QUIÉN SOY -->
       <section id="quien-soy" class="section quien-soy">
         <div class="container">
           <h2 class="about-title">Quién soy</h2>
@@ -79,73 +69,71 @@
         </div>
       </section>
 
-      <!-- 3️⃣ DISEÑO GRÁFICO -->
+      <!-- DISEÑO GRÁFICO -->
       <section id="graphic-design" class="section graphic-design">
         <div class="container">
           <h2>Diseño Gráfico</h2>
-          <!-- Trabajos de diseño gráfico -->
         </div>
       </section>
 
-      <!-- 4️⃣ ILUSTRACIÓN -->
+      <!-- ILUSTRACIÓN -->
       <section id="illustration" class="section illustration">
         <div class="container">
           <h2>Ilustración</h2>
-          <!-- Aquí irán tus ilustraciones -->
         </div>
       </section>
-      <!-- 5️⃣ FOTOGRAFÍA -->
-      <section id="photography" class="section photography">
-        <div class="container photography-container">
-          <div class="photography-wrapper">
-            <!-- Columna izquierda: Título + Imagen -->
-            <div class="photography-left">
-              <h2>Fotografía</h2>
-              <img
-                src="https://ik.imagekit.io/ig1zyhrhpc/IMG_0882.jpeg"
-                alt="Foto"
-                class="photography-image"
-              />
-            </div>
 
-            <!-- Columna derecha: Texto -->
-            <div class="photography-right">
-              <p>
-                La fotografía me permite congelar momentos y espacios que me
-                sorprenden. Esta herramienta me sirve para transmitir de forma
-                diferente y para trabajar con ilustraciones o formatos gráficos.
-                El siguiente <a href="#">link</a> conecta con una colección de
-                mis fotografías.
-              </p>
+      <!-- FOTOGRAFÍA -->
+      <section id="photography" class="section photography">
+        <div class="photography-container">
+          <div class="photography-left">
+            <h2>Fotografía</h2>
+            <div class="photo-carousel">
+              <img
+                id="carouselImage"
+                src="https://ik.imagekit.io/ig1zyhrhpc/IMG_0882.jpeg"
+                alt="Foto de calle"
+              />
+              <button id="nextBtn" class="carousel-btn">→</button>
             </div>
+          </div>
+
+          <div class="photography-right">
+            <p>
+              La fotografía me permite congelar momentos y espacios que me
+              sorprenden. Esta herramienta me sirve para transmitir de forma
+              diferente y para trabajar con ilustraciones o formatos gráficos.
+              El siguiente
+              <a
+                href="https://isaacpinaportillo.pixieset.com/fotografiasdecalle/"
+                target="_blank"
+                >link</a
+              >
+              conecta con una colección de mis fotografías.
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- 6️⃣ 3D -->
+      <!-- 3D -->
       <section id="3d" class="section threed">
         <div class="container">
           <h2>3D</h2>
-          <!-- Aquí irán tus trabajos 3D -->
         </div>
       </section>
 
-      <!-- 8️⃣ CONTACT SECTION -->
+      <!-- CONTACT -->
       <section id="contact" class="section contact">
         <div class="container">
           <h2 class="section-title">Get In Touch</h2>
-
           <div class="contact-content">
             <p>Interested in working together? Let’s talk.</p>
-
             <form class="contact-form">
               <input type="text" placeholder="Your name" required />
               <input type="email" placeholder="Your email" required />
               <textarea placeholder="Your message" required></textarea>
-
               <button type="submit" class="btn">Send Message</button>
             </form>
-
             <div class="social-links">
               <a href="#">GitHub</a>
               <a href="#">LinkedIn</a>
@@ -163,5 +151,23 @@
         <a href="#hero" class="back-to-top">↑</a>
       </div>
     </footer>
+
+    <!-- JAVASCRIPT CARRUSEL -->
+    <script>
+      const images = [
+        "https://ik.imagekit.io/ig1zyhrhpc/IMG_0882.jpeg",
+        "https://ik.imagekit.io/ig1zyhrhpc/IMG_0891.jpeg",
+        "https://ik.imagekit.io/ig1zyhrhpc/IMG_1265.jpeg",
+        "https://ik.imagekit.io/ig1zyhrhpc/IMG_0608.jpeg",
+        "https://ik.imagekit.io/ig1zyhrhpc/IMG_0391.jpeg",
+      ];
+      let currentIndex = 0;
+      const carouselImage = document.getElementById("carouselImage");
+      const nextBtn = document.getElementById("nextBtn");
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        carouselImage.src = images[currentIndex];
+      });
+    </script>
   </body>
 </html>

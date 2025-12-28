@@ -138,7 +138,7 @@
   }
 }
 
-/* SECCIÓN DE IMAGEN */
+/* SECCIÓN DE IMAGEN CENTRAL (logo) */
 .image-section {
   padding-top: 10px;
   padding-bottom: 60px;
@@ -148,7 +148,7 @@
   background-color: #fff;
 }
 
-.image-section .container {
+.logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,6 +158,7 @@
 .center-image-large {
   max-width: 78%;
   height: auto;
+  display: block;
 }
 
 /* SECCIONES DEL PORTFOLIO */
@@ -238,53 +239,70 @@
   padding-left: 4.7vw;
 }
 
-/* FOTOGRAFÍA CON CARRUSEL */
 /* =========================
-   APARTADO FOTOGRAFÍA
+   SECCIÓN FOTOGRAFÍA CON CARRUSEL
 ========================= */
 .photography-container {
   display: flex;
-  justify-content: flex-start; /* todo alineado a la izquierda */
-  align-items: flex-start;
-  gap: 2rem;
-  padding-left: 4.7vw;
-}
-
-.photography-wrapper {
-  display: flex;
   gap: 2rem; /* espacio entre columnas */
-  align-items: flex-start; /* alinea al top por defecto */
+  align-items: flex-start;
+  padding-left: 4.7vw;
 }
 
 .photography-left {
   flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .photography-left h2 {
   font-family: "TuTipografiaDePortfolio", sans-serif;
   font-size: 5rem;
   font-weight: bold;
-  margin-bottom: 1rem; /* menos espacio con la imagen */
+  margin-bottom: 1rem;
   text-align: left;
 }
 
-.photography-left img {
-  width: auto;
-  max-width: 65%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain; /* se ve toda la foto */
+.photo-carousel {
+  position: relative;
+  width: 100%;
 }
 
-/* COLUMNA DERECHA CON TEXTO AL PIE DE LA IMAGEN */
+.photo-carousel img {
+  width: auto;
+  max-width: 650px; /* tamaño de la imagen */
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  right: -30px; /* fuera de la foto a la derecha */
+  transform: translateY(-50%);
+  font-size: 6rem; /* más grande */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000000; /* rojo brillante para destacar */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* sombra */
+  transition: transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  transform: translateY(-50%) scale(1.2); /* crece al pasar el ratón */
+}
+
+/* -------------------------
+   COLUMNA DERECHA (TEXTO AL PIE DE LA FOTO)
+------------------------- */
 .photography-right {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* empuja el texto hacia el fondo de la columna */
+  justify-content: flex-end; /* baja el texto al pie de la columna */
+  align-items: flex-start; /* mantiene alineado a la izquierda */
+  height: 100%; /* asegura que ocupe toda la altura de la columna */
+  padding-left: 2rem; /* separación entre imagen y texto */
 }
 
 .photography-right p {
