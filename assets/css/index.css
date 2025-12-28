@@ -13,30 +13,26 @@
 
 /* Bloque negro superior */
 .hero-top {
-  background: #000; /* Fondo negro */
+  background: #000;
   width: 100%;
   padding: 2rem 2vw;
   display: flex;
-  justify-content: space-between; /* About Me izquierda, menú centrado */
+  justify-content: space-between;
   align-items: center;
 }
 
-/* =========================
-   BLOQUE ABOUT ME (A LA IZQUIERDA, MÁS A LA DERECHA)
-========================= */
+/* BLOQUE QUIÉN SOY (A LA IZQUIERDA) */
 .hero .hero-top .hero-about {
   font-family: "YourFont", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   white-space: nowrap;
-  margin-left: 3vw; /* Más a la derecha que antes */
-  color: #ffffff !important; /* FORZADO blanco */
+  margin-left: 3vw;
+  color: #ffffff !important;
 }
 
-/* =========================
-   HERO MENU (centrado)
-========================= */
+/* HERO MENU */
 .hero-menu {
   display: flex;
   justify-content: center;
@@ -57,7 +53,7 @@
   font-family: "YourFont", sans-serif;
   font-size: 1.5rem;
   text-decoration: none;
-  color: #fff; /* Letras blancas */
+  color: #fff;
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
@@ -66,21 +62,19 @@
   opacity: 1;
 }
 
-/* =========================
-   BLOQUE SECCIONES CENTRADAS DEL HERO
-========================= */
+/* BLOQUE SECCIONES CENTRADAS DEL HERO */
 .hero-sections {
   display: flex;
-  justify-content: center; /* Centrado horizontal */
-  gap: 4rem; /* Espacio entre secciones */
+  justify-content: center;
+  gap: 4rem;
   margin-top: 2rem;
 }
 
 .hero-sections a {
   font-family: "YourFont", sans-serif;
-  font-size: 1.8rem; /* Tamaño de las secciones */
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #fff; /* Blanco */
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
@@ -89,13 +83,11 @@
   opacity: 0.8;
 }
 
-/* =========================
-   TÍTULO PORTFOLIO (debajo del bloque negro)
-========================= */
+/* TÍTULO PORTFOLIO */
 .hero-title-container {
   align-self: flex-start;
-  margin: 25vh 2vw; /* Separación desde el bloque negro */
-  background: #fff; /* Fondo blanco */
+  margin: 25vh 2vw;
+  background: #fff;
   padding: 1rem;
 }
 
@@ -106,7 +98,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  color: #000; /* Letras negras */
+  color: #000;
 }
 
 .hero h1 .line {
@@ -121,9 +113,7 @@
   align-items: flex-end;
 }
 
-/* =========================
-   SUBTÍTULO (ANIMADO)
-========================= */
+/* SUBTÍTULO ANIMADO */
 .hero-subtitle {
   font-size: 32px;
   font-weight: normal;
@@ -131,10 +121,8 @@
   white-space: nowrap;
   position: relative;
   display: inline-block;
-  color: #000; /* Letras negras */
-
+  color: #000;
   opacity: 0;
-
   animation: slideFromO 1.5s ease forwards;
   animation-delay: 1.4s;
 }
@@ -149,13 +137,10 @@
     opacity: 1;
   }
 }
-/* =========================
-   SECCIÓN DE IMAGEN
-========================= */
 
-/* SECCIÓN DE IMAGEN AJUSTADA */
+/* SECCIÓN DE IMAGEN */
 .image-section {
-  padding-top: 10px; /* MUCHO más cerca del PORTFOLIO */
+  padding-top: 10px;
   padding-bottom: 60px;
   display: flex;
   justify-content: center;
@@ -175,42 +160,37 @@
   height: auto;
 }
 
-/* =========================
-   SECCIONES DEL PORTFOLIO
-========================= */
+/* SECCIONES DEL PORTFOLIO */
 .section {
   padding: 8vh 2vw;
   width: 100%;
 }
 
-/* ABOUT ME SECCIÓN */
-/* =========================
-   ABOUT ME
-========================= */
-.about-me {
+/* QUIÉN SOY */
+.quien-soy {
   padding: 80px 20px;
   background-color: #f9f9f9;
-  text-align: left; /* Alinea todo a la izquierda */
+  text-align: left;
 }
 
-.about-me .container {
-  max-width: 900px;
+.quien-soy .container {
+  max-width: 750px;
   margin: 0 auto;
-  text-align: left; /* Refuerza alineación a la izquierda */
+  text-align: left;
 }
 
 .about-title {
-  font-family: "TuTipografiaDePortfolio", sans-serif; /* Igual que Portfolio */
+  font-family: "TuTipografiaDePortfolio", sans-serif;
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   color: #111;
-  text-align: left; /* Alineación título a la izquierda */
+  text-align: left;
 }
 
-.about-me p {
-  font-size: 1.1rem;
+.quien-soy p {
+  font-size: 1.5rem;
   line-height: 1.7;
   color: #333;
   margin-bottom: 1.2rem;
@@ -230,8 +210,85 @@
   background: #fff2f9;
 }
 
+/* TÍTULOS SECCIONES */
 .section h2 {
-  font-size: 3rem;
+  font-family: "TuTipografiaDePortfolio", sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: left;
+  line-height: 1.2;
+  color: #111;
+}
+
+/* FIX QUIÉN SOY */
+#quien-soy {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#quien-soy .container {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* DESPLAZAMIENTO EDITORIAL A LA DERECHA */
+.section .container {
+  padding-left: 4.7vw;
+}
+
+/* FOTOGRAFÍA CON CARRUSEL */
+/* =========================
+   APARTADO FOTOGRAFÍA
+========================= */
+.photography-container {
+  display: flex;
+  justify-content: flex-start; /* todo alineado a la izquierda */
+  align-items: flex-start;
+  gap: 2rem;
+  padding-left: 4.7vw;
+}
+
+.photography-wrapper {
+  display: flex;
+  gap: 2rem; /* espacio entre columnas */
+  align-items: flex-start; /* alinea al top por defecto */
+}
+
+.photography-left {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.photography-left h2 {
+  font-family: "TuTipografiaDePortfolio", sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 1rem; /* menos espacio con la imagen */
+  text-align: left;
+}
+
+.photography-left img {
+  width: auto;
+  max-width: 65%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain; /* se ve toda la foto */
+}
+
+/* COLUMNA DERECHA CON TEXTO AL PIE DE LA IMAGEN */
+.photography-right {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* empuja el texto hacia el fondo de la columna */
+}
+
+.photography-right p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin: 0;
 }
