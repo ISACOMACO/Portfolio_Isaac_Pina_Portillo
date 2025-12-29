@@ -11,7 +11,6 @@
   z-index: 1000;
 }
 
-/* Bloque negro superior */
 .hero-top {
   background: #000;
   width: 100%;
@@ -21,7 +20,6 @@
   align-items: center;
 }
 
-/* BLOQUE QUIÉN SOY (A LA IZQUIERDA) */
 .hero .hero-top .hero-about {
   font-family: "YourFont", sans-serif;
   font-size: 1.5rem;
@@ -62,7 +60,7 @@
   opacity: 1;
 }
 
-/* BLOQUE SECCIONES CENTRADAS DEL HERO */
+/* SECCIONES HERO */
 .hero-sections {
   display: flex;
   justify-content: center;
@@ -76,7 +74,6 @@
   font-weight: bold;
   color: #fff;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .hero-sections a:hover {
@@ -102,26 +99,12 @@
 }
 
 .hero h1 .line {
-  display: flex;
-  align-items: flex-end;
   font-size: clamp(32vh, 38vh, 52vh);
 }
 
-.hero h1 .folio-line {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-}
-
-/* SUBTÍTULO ANIMADO */
 .hero-subtitle {
   font-size: 32px;
-  font-weight: normal;
   margin-left: 0.5rem;
-  white-space: nowrap;
-  position: relative;
-  display: inline-block;
-  color: #000;
   opacity: 0;
   animation: slideFromO 1.5s ease forwards;
   animation-delay: 1.4s;
@@ -138,7 +121,9 @@
   }
 }
 
-/* SECCIÓN DE IMAGEN CENTRAL (logo) */
+/* =========================
+   SECCIÓN IMAGEN CENTRAL (LOGO + TEXTO)
+========================= */
 .image-section {
   padding-top: 10px;
   padding-bottom: 60px;
@@ -149,164 +134,214 @@
 }
 
 .logo-container {
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
+/* Logo SIEMPRE por delante */
 .center-image-large {
   max-width: 78%;
   height: auto;
   display: block;
+  position: relative;
+  z-index: 3;
 }
 
-/* SECCIONES DEL PORTFOLIO */
+/* Palabras animadas */
+.word {
+  position: absolute;
+  top: 50%;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+/* Posición inicial (nacen detrás del logo) */
+.word.left {
+  left: 50%;
+}
+
+.word.right {
+  right: 50%;
+}
+
+/* =========================
+   SECCIONES PORTFOLIO
+========================= */
 .section {
   padding: 8vh 2vw;
-  width: 100%;
 }
 
-/* QUIÉN SOY */
+.section h2 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
 .quien-soy {
   padding: 80px 20px;
   background-color: #f9f9f9;
-  text-align: left;
 }
 
 .quien-soy .container {
   max-width: 750px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.about-title {
-  font-family: "TuTipografiaDePortfolio", sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-  color: #111;
-  text-align: left;
 }
 
 .quien-soy p {
   font-size: 1.5rem;
   line-height: 1.7;
-  color: #333;
-  margin-bottom: 1.2rem;
-}
-
-/* OTROS APARTADOS */
-.graphic-design {
-  background: #fff9f2;
-}
-.illustration {
-  background: #f2f9ff;
-}
-.photography {
-  background: #f9fff2;
-}
-.threed {
-  background: #fff2f9;
-}
-
-/* TÍTULOS SECCIONES */
-.section h2 {
-  font-family: "TuTipografiaDePortfolio", sans-serif;
-  font-size: 5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  text-align: left;
-  line-height: 1.2;
-  color: #111;
-}
-
-/* FIX QUIÉN SOY */
-#quien-soy {
-  display: flex;
-  justify-content: flex-start;
-}
-
-#quien-soy .container {
-  margin-left: 0;
-  margin-right: auto;
-  text-align: left;
-}
-
-/* DESPLAZAMIENTO EDITORIAL A LA DERECHA */
-.section .container {
-  padding-left: 4.7vw;
 }
 
 /* =========================
-   SECCIÓN FOTOGRAFÍA CON CARRUSEL
+   FOTOGRAFÍA + CARRUSEL
 ========================= */
 .photography-container {
   display: flex;
-  gap: 2rem; /* espacio entre columnas */
-  align-items: flex-start;
+  gap: 2rem;
   padding-left: 4.7vw;
-}
-
-.photography-left {
-  flex: 1 1 auto;
-}
-
-.photography-left h2 {
-  font-family: "TuTipografiaDePortfolio", sans-serif;
-  font-size: 5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-align: left;
 }
 
 .photo-carousel {
   position: relative;
-  width: 100%;
 }
 
 .photo-carousel img {
-  width: auto;
-  max-width: 650px; /* tamaño de la imagen */
-  height: auto;
+  max-width: 650px;
   border-radius: 8px;
-  display: block;
 }
 
 .carousel-btn {
   position: absolute;
   top: 50%;
-  right: -30px; /* fuera de la foto a la derecha */
-  transform: translateY(-50%);
-  font-size: 6rem; /* más grande */
+  right: -30px;
+  font-size: 6rem;
   background: none;
   border: none;
   cursor: pointer;
-  color: #000000; /* rojo brillante para destacar */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* sombra */
-  transition: transform 0.2s ease;
+}
+/* =========================
+   SECCIÓN CONTACTO
+========================= */
+
+.contact-section {
+  background-color: #000;
+  color: #fff;
+  padding: 120px 8vw;
 }
 
-.carousel-btn:hover {
-  transform: translateY(-50%) scale(1.2); /* crece al pasar el ratón */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-/* -------------------------
-   COLUMNA DERECHA (TEXTO AL PIE DE LA FOTO)
-------------------------- */
-.photography-right {
-  flex: 1 1 auto;
+/* =========================
+   SECCIÓN CONTACTO AJUSTES TÍTULO
+========================= */
+
+.contact-text h2 {
+  font-size: 4rem; /* más grande */
+  margin-bottom: 30px; /* más separación del texto */
+  text-align: left; /* alineación al margen izquierdo */
+}
+
+.contact-text p {
+  font-size: 1.5rem; /* texto más grande */
+  line-height: 1.8;
+  opacity: 0.9;
+  text-align: left; /* alineación al margen izquierdo */
+  max-width: 500px; /* opcional: que no se extienda demasiado */
+}
+
+.contact-social {
+  margin-top: 40px;
+}
+
+.contact-social p {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.contact-social a {
+  color: #fff;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.contact-social a:hover {
+  opacity: 1;
+}
+
+/* FORMULARIO */
+
+.contact-form {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* baja el texto al pie de la columna */
-  align-items: flex-start; /* mantiene alineado a la izquierda */
-  height: 100%; /* asegura que ocupe toda la altura de la columna */
-  padding-left: 2rem; /* separación entre imagen y texto */
+  gap: 20px;
 }
 
-.photography-right p {
-  font-size: 1.5rem;
-  line-height: 1.7;
-  margin: 0;
+.contact-form input,
+.contact-form textarea {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 14px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ddd;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contact-text h2 {
+    font-size: 2.4rem;
+  }
+} /* =========================
+   FOOTER CONTACTO
+========================= */
+
+.contact-footer {
+  margin-top: 100px;
+  padding-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
 }

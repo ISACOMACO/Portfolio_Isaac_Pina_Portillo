@@ -30,6 +30,7 @@
             </ul>
           </nav>
         </div>
+
         <div class="hero-title-container">
           <h1 class="hero-title">
             <span class="line">PORT</span>&nbsp;&nbsp;
@@ -40,16 +41,46 @@
           </h1>
         </div>
       </section>
-      <!-- SECCIÓN CON IMAGEN CENTRAL -->
+
+      <!-- SECCIÓN LOGO CON TEXTO ANIMADO -->
       <section id="image-section" class="image-section">
         <div class="logo-container">
+          <span class="word left">Diseñador</span>
+
           <img
             src="https://ik.imagekit.io/ig1zyhrhpc/LOGO%20ISAAC-02.png"
             alt="Isaac Logo"
             class="center-image-large"
           />
+
+          <span class="word right">Creativo</span>
         </div>
       </section>
+
+      <!-- JAVASCRIPT ANIMACIÓN SCROLL LOGO -->
+      <script>
+        const section = document.getElementById("image-section");
+        const leftWord = document.querySelector(".word.left");
+        const rightWord = document.querySelector(".word.right");
+
+        window.addEventListener("scroll", () => {
+          const rect = section.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+
+          let progress = 1 - rect.top / windowHeight;
+          progress = Math.min(Math.max(progress, 0), 1);
+
+          // Más desplazamiento lateral
+          const distance = progress * 350;
+
+          leftWord.style.opacity = progress;
+          rightWord.style.opacity = progress;
+
+          // Salen desde detrás del logo hacia los lados
+          leftWord.style.transform = `translate(-${distance}px, -50%)`;
+          rightWord.style.transform = `translate(${distance}px, -50%)`;
+        });
+      </script>
 
       <!-- QUIÉN SOY -->
       <section id="quien-soy" class="section quien-soy">
@@ -74,6 +105,7 @@
         <div class="container">
           <h2>Diseño Gráfico</h2>
         </div>
+        
       </section>
 
       <!-- ILUSTRACIÓN -->
@@ -122,36 +154,6 @@
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section id="contact" class="section contact">
-        <div class="container">
-          <h2 class="section-title">Get In Touch</h2>
-          <div class="contact-content">
-            <p>Interested in working together? Let’s talk.</p>
-            <form class="contact-form">
-              <input type="text" placeholder="Your name" required />
-              <input type="email" placeholder="Your email" required />
-              <textarea placeholder="Your message" required></textarea>
-              <button type="submit" class="btn">Send Message</button>
-            </form>
-            <div class="social-links">
-              <a href="#">GitHub</a>
-              <a href="#">LinkedIn</a>
-              <a href="#">Instagram</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Isaac Piña Portillo. All rights reserved.</p>
-        <a href="#hero" class="back-to-top">↑</a>
-      </div>
-    </footer>
-
     <!-- JAVASCRIPT CARRUSEL -->
     <script>
       const images = [
@@ -161,13 +163,63 @@
         "https://ik.imagekit.io/ig1zyhrhpc/IMG_0608.jpeg",
         "https://ik.imagekit.io/ig1zyhrhpc/IMG_0391.jpeg",
       ];
+
       let currentIndex = 0;
       const carouselImage = document.getElementById("carouselImage");
       const nextBtn = document.getElementById("nextBtn");
+
       nextBtn.addEventListener("click", () => {
         currentIndex = (currentIndex + 1) % images.length;
         carouselImage.src = images[currentIndex];
       });
     </script>
+    <section id="contacto" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-text">
+          <h2>Hablemos 👋</h2>
+          <p>
+            ¿Tienes un proyecto en mente, una idea o simplemente quieres
+            saludar? Escríbeme y te responderé lo antes posible.
+          </p>
+
+          <div class="contact-social">
+            <p>📍 Dirección: <span>Calle Povedilla 15, 2, 3. 28009, Madrid, España</span></p>
+            <p>
+              📸 Instagram:
+              <a href="https://instagram.com/_isaac.portilloo_" target="_blank">
+                @_isaac.portilloo_
+              </a>
+            </p>
+            <p>
+              💼 LinkedIn:
+              <a href="https://www.linkedin.com/in/isaac-piña-portillo/" target="_blank">
+                Isaac Piña Portillo
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <form
+          class="contact-form"
+          action="mailto:tucorreo@email.com"
+          method="POST"
+          enctype="text/plain"
+        >
+          <input type="text" name="name" placeholder="Tu nombre" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Tu correo electrónico"
+            required
+          />
+          <textarea name="message" placeholder="Tu mensaje" required></textarea>
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+      <div class="contact-footer">
+  © 2025 Isaac Piña Portillo. All rights reserved.
+</div>
+
+    </section>
   </body>
 </html>
