@@ -3,8 +3,7 @@ Portfolio Online – Isaac Piña Portillo
 
 Este proyecto consiste en el desarrollo de mi portfolio online personal, creado y diseñado íntegramente por mí.
 
-Descripción del Proyecto
-El portfolio recoge una selección de mis trabajos en diferentes disciplinas creativas, organizados en secciones claras y diferenciadas:
+El portfolio recoge una selección de mis trabajos en diferentes disciplinas creativas, organizados en secciones claras y diferenciada.
 Ilustración: Proyectos personales y exploraciones gráficas, presentados con efectos de glassmorphism para dar profundidad y dinamismo.
 Diseño gráfico: Branding, identidad visual, composición y comunicación, con presentación ordenada.
 Fotografía: Carrusel interactivo de imágenes tomadas por mí, que permite una navegación fluida y visualmente atractiva.
